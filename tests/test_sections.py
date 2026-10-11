@@ -4,7 +4,7 @@ Tests for src/sections.py (heading detection) and src/ingestion.py (parallel loa
     python tests/test_sections.py          # no pytest needed
     pytest tests/test_sections.py          # also works
 
-The unit tests use synthetic text built from real pypdf output quirks. The golden test loads real
+The unit tests use synthetic text built from real pypdf output quirks. The test loads real
 financebench PDFs and checks the exact heading sequence ("<key>@<page index>"); it is skipped when the
 PDFs are not there. First run parses ~8,000 pages (~70s on 8 cores), later runs read Data/cache/pages.
 """

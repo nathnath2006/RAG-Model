@@ -4,3 +4,4 @@ pypdf_warnings.json
 Data/cache/
 src/__pycache__/
 Data/financebench/
+Data/chroma/

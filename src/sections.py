@@ -10,7 +10,7 @@ from langchain_core.documents import Document
 OMITTED = r"[\[(]?(?:removedand)?reserved|intentionallyomitted|omitted|notapplicable"
 
 # Each form is an ordered list of (key, part, item id, canonical title, title regex).
-# The title regex is matched against the text right after "Item <id>", lowercased and with ALL whitespace
+# The title regex is matched against the text right after "Item <id>", lowercased and with all whitespace
 # removed: pypdf splits words ("B\nUSINESS", "DISCUSSI ON"), so whitespace can't be trusted.
 # Requiring the title is what separates a heading from a cross-reference ("see Item 8 of this report"),
 # and it is the only way to tell 10-Q "Part I Item 2 (MD&A)" from "Part II Item 2 (Unregistered Sales)".
