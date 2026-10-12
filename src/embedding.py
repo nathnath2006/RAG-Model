@@ -176,8 +176,7 @@ def index(collection: chromadb.Collection, client: genai.Client, pieces: list[Pi
 def search(collection: chromadb.Collection, client: genai.Client, question: str, k: int = 5, where: dict | None = None) -> list[dict]:
     """
     Top-k pieces for a question, closest first. `where` filters on metadata, e.g. {"company_name": "3M"}.
-    The question is embedded here, with the query task type: never pass query_texts, Chroma would embed
-    it with its own default model.
+    The question is embedded here, with the query task type.
     """
     vector = embed_texts(client, [question], "RETRIEVAL_QUERY")[0]
     res = collection.query(query_embeddings=[vector], n_results=k, where=where,
