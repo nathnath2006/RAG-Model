@@ -16,9 +16,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from langchain_core.documents import Document  # noqa: E402
+from langchain_core.documents import Document 
 
-import sections as S  # noqa: E402
+import helpers.sections as S 
 
 PDF_DIR = ROOT / "Data" / "financebench" / "pdfs"
 CACHE_DIR = ROOT / "Data" / "cache" / "pages"
@@ -241,7 +241,7 @@ def test_golden_filings():
     if not PDF_DIR.exists():
         print("  skipped: no PDFs in", PDF_DIR)
         return
-    import ingestion
+    import helpers.ingestion as ingestion
 
     golden = GOLDEN_VERIFIED | GOLDEN_HOLDOUT
     docs = ingestion.load_pdfs([PDF_DIR / f"{name}.pdf" for name in golden], cache_dir=CACHE_DIR)

@@ -9,7 +9,7 @@ from pathlib import Path
 from langchain_core.documents import Document
 from tqdm.auto import tqdm
 
-import pdf_logging as pf
+import helpers.pdf_logging as pf
 
 logger = logging.getLogger(__name__)
 
