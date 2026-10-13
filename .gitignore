@@ -5,3 +5,6 @@ Data/cache/
 src/__pycache__/
 Data/financebench/
 Data/chroma/
+
+__pycache__/
+.DS_Store
